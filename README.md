@@ -1,12 +1,12 @@
 # YOLOv5x6 Real-Time Object Detection 🚀
 
-A **C++ project** using **OpenCV DNN** and **YOLOv5x6 (ONNX)** to detect and count objects in real-time from multiple camera feeds.
+A **C++ project** using **OpenCV DNN** and **YOLOv5n (ONNX)** to detect and count objects in real-time from multiple camera feeds.
 
 ---
 
 ## 📌 Features
 
-* Loads **YOLOv5x6** model for higher-accuracy detection.
+* Loads **YOLOv5n** model for higher-accuracy detection.
 * Supports **multi-camera feeds** with **threading**.
 * Runs on **CPU** or **CUDA (GPU)** for faster inference.
 * Detects objects and draws **bounding boxes** with class labels.
@@ -21,7 +21,7 @@ A **C++ project** using **OpenCV DNN** and **YOLOv5x6 (ONNX)** to detect and cou
 * **C++17 or later**
 * **OpenCV 4.5+** with DNN module
 * **CUDA/cuDNN** (optional, for GPU acceleration)
-* YOLOv5x6 ONNX model (`yolov5x6.onnx`)
+* YOLOv5x6 ONNX model (`yolov5n.onnx`)
 * Classes file (`classes.txt`)
 
 Install OpenCV (Linux example):
@@ -39,7 +39,7 @@ For CUDA, ensure OpenCV is compiled with `-D WITH_CUDA=ON`.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/NoobSaifii/yolov5x6-object-detection.git
+git clone https://github.com/NoobSaifii/yolov5n-object-detection.git
 cd yolov5x6-object-detection
 ```
 
@@ -66,7 +66,7 @@ make
 yolov5x6-object-detection/
 │-- main.cpp                # Main detection code
 │-- classes.txt             # Class labels file
-│-- yolov5x6.onnx           # YOLOv5x6 ONNX model
+│-- yolov5n.onnx           # YOLOv5x6 ONNX model
 │-- CMakeLists.txt          # Build configuration
 │-- README.md               # Project documentation
 ```
@@ -90,7 +90,7 @@ Total Objects detected across all cameras: 342
 * Pre-trained **YOLOv5x6** model exported to ONNX.
 * COCO dataset classes used in `classes.txt`.
 
-Download YOLOv5x6 ONNX model:
+Download YOLOv5n ONNX model:
 
 * [YOLOv5 Releases - Ultralytics](https://github.com/ultralytics/yolov5/releases)
 
