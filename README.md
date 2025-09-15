@@ -1,4 +1,4 @@
-# YOLOv5x6 Real-Time Object Detection 🚀
+# YOLOv5n Real-Time Object Detection 🚀
 
 A **C++ project** using **OpenCV DNN** and **YOLOv5n (ONNX)** to detect and count objects in real-time from multiple camera feeds.
 
