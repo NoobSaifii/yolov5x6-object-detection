@@ -1,27 +1,28 @@
-# Vehicle Detection with YOLOv5 🚗🚌🚛
+# YOLOv5x6 Real-Time Object Detection 🚀
 
-A **C++ project** using **OpenCV DNN** and **YOLOv5 (ONNX format)** to detect and count vehicles from multiple camera feeds in real time.
+A **C++ project** using **OpenCV DNN** and **YOLOv5x6 (ONNX)** to detect and count objects in real-time from multiple camera feeds.
 
 ---
 
 ## 📌 Features
 
-* Loads **YOLOv5n (nano)** model in ONNX format for lightweight real-time inference.
-* Runs detection on **multiple cameras simultaneously** using C++ multithreading.
-* Supports both **CPU** and **CUDA (GPU)** inference.
-* Detects objects and overlays bounding boxes with class labels.
-* Tracks **active vehicles per frame** and maintains a global vehicle count.
-* Uses **frame skipping** for improved performance on lower-end hardware.
+* Loads **YOLOv5x6** model for higher-accuracy detection.
+* Supports **multi-camera feeds** with **threading**.
+* Runs on **CPU** or **CUDA (GPU)** for faster inference.
+* Detects objects and draws **bounding boxes** with class labels.
+* Tracks **active objects per frame** and updates a **global object count**.
+* Uses **frame skipping** to improve performance.
+* Implements **letterboxing** in preprocessing for correct aspect ratio.
 
 ---
 
 ## 🛠 Requirements
 
 * **C++17 or later**
-* **OpenCV 4.5+** (with DNN module enabled)
+* **OpenCV 4.5+** with DNN module
 * **CUDA/cuDNN** (optional, for GPU acceleration)
-* YOLOv5n ONNX model (`yolov5n.onnx`)
-* Classes file (`classes.txt` with COCO class labels)
+* YOLOv5x6 ONNX model (`yolov5x6.onnx`)
+* Classes file (`classes.txt`)
 
 Install OpenCV (Linux example):
 
@@ -29,17 +30,17 @@ Install OpenCV (Linux example):
 sudo apt-get install libopencv-dev
 ```
 
-For CUDA build, ensure OpenCV is compiled with `-D WITH_CUDA=ON`.
+For CUDA, ensure OpenCV is compiled with `-D WITH_CUDA=ON`.
 
 ---
 
 ## 🚀 Build Instructions
 
-1. Clone this repository:
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/NoobSaifii/vehicle-detection-yolov5.git
-cd vehicle-detection-yolov5
+git clone https://github.com/NoobSaifii/yolov5x6-object-detection.git
+cd yolov5x6-object-detection
 ```
 
 2. Create a `build/` directory and compile:
@@ -53,8 +54,8 @@ make
 3. Run the program:
 
 ```bash
-./vehicle_detection         # Run on CPU
-./vehicle_detection cuda    # Run on GPU (CUDA)
+./object_detection          # CPU mode
+./object_detection cuda     # GPU (CUDA) mode
 ```
 
 ---
@@ -62,39 +63,39 @@ make
 ## 📂 Project Structure
 
 ```
-vehicle-detection-yolov5/
-│-- main.cpp                # Main source code
-│-- classes.txt             # COCO class labels
-│-- yolov5n.onnx            # YOLOv5 nano model (ONNX)
+yolov5x6-object-detection/
+│-- main.cpp                # Main detection code
+│-- classes.txt             # Class labels file
+│-- yolov5x6.onnx           # YOLOv5x6 ONNX model
 │-- CMakeLists.txt          # Build configuration
-│-- README.md               # Documentation
+│-- README.md               # Project documentation
 ```
 
 ---
 
 ## 📊 Example Output
 
-* Bounding boxes drawn around detected vehicles.
-* Per-frame vehicle count overlayed.
+* Bounding boxes with class labels for each detected object.
+* Active objects count displayed on frame.
 * Final output:
 
 ```
-Total vehicles detected across all cameras: 235
+Total Objects detected across all cameras: 342
 ```
 
 ---
 
-## 📖 Dataset & Model
+## 📖 Model & Dataset
 
-* Pre-trained **YOLOv5n (nano)** model exported to ONNX.
-* COCO dataset labels used in `classes.txt`.
+* Pre-trained **YOLOv5x6** model exported to ONNX.
+* COCO dataset classes used in `classes.txt`.
 
-Download YOLOv5 ONNX model:
+Download YOLOv5x6 ONNX model:
 
-* [YOLOv5 Releases (Ultralytics)](https://github.com/ultralytics/yolov5/releases)
+* [YOLOv5 Releases - Ultralytics](https://github.com/ultralytics/yolov5/releases)
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** – feel free to use, modify, and share.
+This project is licensed under the **MIT License** – free to use, modify, and share.
